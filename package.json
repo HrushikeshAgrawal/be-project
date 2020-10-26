@@ -1,0 +1,28 @@
+{
+  "name": "blockchain-on-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "server0": "cd servers && nodemon server5000",
+    "server1": "cd servers && nodemon server5001",
+    "server2": "cd servers && nodemon server5002",
+    "server3": "cd servers && nodemon server5003",
+    "devserver": "concurrently \"npm run server0\" \"npm run server1\" \"npm run server2\" \"npm run server3\"",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run devserver\" \"npm run client\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "uuid": "^7.0.3",
+    "web3": "^1.0.0-beta.26"
+  }
+}
